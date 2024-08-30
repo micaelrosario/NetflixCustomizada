@@ -7,19 +7,32 @@
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-    <header>
-        <div class="containerLogin">
-            <h1>Entrar</h1>
-            <input type="email" placeholder="Email ou número de telefone">
-            <input type="password" placeholder="Senha">
-            <button type="submit">Entrar</button>
-            <div class="col">
-                <label><input type="checkbox">Lembre-se de mim</label>
+    <nav>
+        <a href="#"><img src="/imagem/net-logo.png" alt="logo netflix"></a>
+    </nav>
+    <div class="form-login">
+        <h2>Entrar</h2>
+        <form action="#">
+            <div class="form-controle">
+                <input type="text">
+                <label>Email ou número de telefone</label>
+            </div>
+            <div class="form-controle">
+                <input type="password">
+                <label>Senha</label>
+            </div>
+            <button><a href="index.html">Entrar</a></button>
+            <div class="form-ajuda">
+                <input type="checkbox" id="lembrar-me">
+                <label for="lembrar-me">Lembrar-me</label>
                 <a href="#">Precisa de ajuda?</a>
             </div>
-            <p>Novo por aqui? <a href="#">Assine agora</a></p>
-            <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é robô <a href="#">Saiba mais</a> </p>
-        </div>
-    </header>
+        </form>
+        <p>Novo na Netflix? <a href="#">Cadastre-se agora</a></p>
+        <small>
+            This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+            <a href="#">Learn more.</a>
+        </small>
+    </div>
 </body>
 </html>
