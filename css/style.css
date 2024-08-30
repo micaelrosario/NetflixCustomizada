@@ -8,127 +8,209 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+body{
+    background-color: black;
 }
 
 /* ============ BARRA DE NAVEGAÇÃO ============ */
 header {
-    background-image: url(/imagem/daredevil-wallpaper-1.jpg);
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: url(/imagem/bg2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #ffffff; 
+    color: #ffffff;
     padding: 20px;
     box-sizing: border-box;
+    position: relative; 
+    z-index: 1;
+}
+
+
+.container-header {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-header section .box{
     align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.flex {
+.container-header h1 {
+    color: rgb(233, 233, 233);
+    font-size: 30px;
+    flex: 1;
+    margin-left: 50px;
+    font-weight: 600;
+}
+.container-header h1:hover {
+    color: rgb(129, 18, 18);
+}
+
+.container-header nav ul {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    width: 100%; 
-    max-width: 1200px; 
-    margin-bottom: 20px; 
-}
-
-.flex h1 {
-    color: rgb(161, 17, 17);
-    font-size: 40px;
-    margin-left: 10%; 
-    cursor: pointer;
-}
-
-
-.flex nav {
-    margin-right: 5%;
-}
-
-.flex nav ul {
+    flex-direction: row;
     list-style: none;
-    display: flex;
     gap: 20px;
 }
 
-.flex nav ul li a {
+.container-header nav ul li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 24px;
+    color: rgb(248, 248, 248);
+    font-size: 20px;
     transition: color 0.3s ease;
+    padding: 5px;
 }
 
-.flex nav ul li a:hover {
-    color: rgb(180, 27, 27);
+.container-header nav ul li a:hover {
+    color: rgb(55, 55, 55);
 }
 
 /* =========== seção ============== */
-
-.container{
-    display: flex;
-    width: 100%;
-    max-width: 100%;
-    
-}
-
 .box {
-    flex-direction: column;
-    border: 1px solid transparent;
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%); 
     background-color: rgba(0, 0, 0, 0.5); 
-    max-width: 600px;
     padding: 20px;
-    text-align: flex-start; 
-    margin: auto; 
-}
-
-section .container .box{
-    justify-content: flex-start;
-    align-items: flex-start;
+    border-radius: 8px;
+    max-width: 600px; 
+    margin: 0 40px;
 }
 
 .box h1 {
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .box p {
-    margin-bottom: 20px; 
+    margin-bottom: 30px; 
 }
 
 .box-btn {
     display: flex;
     justify-content: flex-start; 
     gap: 10px; 
+    flex: 1;
 }
 
 .box-btn input {
-    flex: auto;
+    width: 50%;
     padding: 10px;
     font-size: 16px;
-    border: none;
+    border: 1px solid white;
     border-radius: 5px;
     background-color: transparent;
 }
+.box-btn input::placeholder {
+    text-align: center;
+    font-size: 13px;
+    background-color: transparent;
+    color: rgb(180, 27, 27);
+}
 
 .box-btn button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 16px;
-    background-color: #e50914;
+    background-color: rgb(219, 17, 17);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-weight: 800;
 }
 
 .box-btn button:hover {
+    background-color: #ffffff;
+    color: #d40813;
+}
+
+/*============ MAIN ================*/
+main{
+    background-color: black;
+}
+
+.topicos{
+    color: rgb(218, 218, 218);
+    text-align: center;
+    padding: 50px 0;
+}
+/*=============== FOOTER =============*/
+
+footer{
+    color: rgb(104, 102, 102);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    padding: 20px 0;
+}
+
+footer .input-btn input{
+    padding: 15px 20px;
+    padding-right: 180px;
+    background-color: rgb(50, 50, 50);
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+footer .input-btn button{
+    padding: 15px 40px;
+    font-size: 20px;
     background-color: #d40813;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: 800;
+}
+footer .input-btn button:hover{
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color: #f2f2f2;
+    color: #d40813;
+}
+footer .input-btn{
+    padding: 20px;
+}
+
+footer .flex-footer{
+    display: flex;
+    flex-direction: row;
+}
+footer .flex-footer div{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+}
+footer .flex-footer div a{
+    margin: 10px 150px;
+    color: #494949;
+    text-align: left;
+}
+
+footer .p-final{
+    .p-final {
+        text-align: left; /* Garante que o texto esteja alinhado à esquerda */
+        margin: 20px; /* Adiciona alguma margem ao redor do parágrafo */
+        font-size: 20px; /* Ajusta o tamanho da fonte conforme necessário */
+        color: #333; /* Define a cor do texto */
+    }
+}
+hr {
+    border: 0; /* Remove a borda padrão */
+    height: 2px; /* Altura da linha */
+    background-color: #333; /* Cor da linha */
+    width: 100%; /* Largura da linha */
+    margin: 20px auto; /* Centraliza horizontalmente e adiciona espaçamento vertical */
 }
